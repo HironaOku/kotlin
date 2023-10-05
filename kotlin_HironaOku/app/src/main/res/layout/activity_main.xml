@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/markBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#CCFFFFFF"
+        android:text="Mark"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/btn_text"
+        app:backgroundTint="@color/btn_yellow"
+        app:icon="@drawable/iconmonstr_check_mark_4_64"
+        app:iconTint="@color/btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/summaryBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="#CCFFFFFF"
+        android:text="Weekly Summary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/btn_text"
+        app:backgroundTint="@color/btn_yellow"
+        app:icon="@drawable/iconmonstr_chart_4_64"
+        app:iconTint="@color/btn_text"
+        app:layout_constraintEnd_toEndOf="@+id/markBtn"
+        app:layout_constraintStart_toStartOf="@+id/markBtn"
+        app:layout_constraintTop_toBottomOf="@+id/markBtn" />
+
+    <Button
+        android:id="@+id/studentListBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="#CCFFFFFF"
+        android:text="Student List ＆ Result"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/btn_text"
+        app:backgroundTint="@color/btn_yellow"
+        app:icon="@drawable/iconmonstr_id_card_10_64"
+        app:iconTint="@color/btn_text"
+        app:layout_constraintEnd_toEndOf="@+id/summaryBtn"
+        app:layout_constraintStart_toStartOf="@+id/summaryBtn"
+        app:layout_constraintTop_toBottomOf="@+id/summaryBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

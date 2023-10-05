@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".StudentResult">
+
+    <ImageButton
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:tint="@color/black_Paragraph"
+        app:layout_constraintBottom_toTopOf="@+id/MyStudentRsultList"
+        app:layout_constraintEnd_toEndOf="@+id/MyStudentRsultList"
+        app:srcCompat="@drawable/iconmonstr_share_9_32" />
+
+    <TextView
+        android:id="@+id/studentResultTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:text="Student Information"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/studentResultTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:background="@color/white"
+        android:text="Result"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleFamilyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Family Name"
+        android:textColor="@color/black_Paragraph"
+        app:layout_constraintStart_toStartOf="@+id/titleFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/titleFirstName" />
+
+    <TextView
+        android:id="@+id/titleStudentID2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Student ID"
+        android:textColor="@color/black_Paragraph"
+        app:layout_constraintStart_toStartOf="@+id/titleFamilyName"
+        app:layout_constraintTop_toBottomOf="@+id/titleFamilyName" />
+
+    <TextView
+        android:id="@+id/titleFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Given Name"
+        android:textColor="@color/black_Paragraph"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/studentResultTitle" />
+
+    <TextView
+        android:id="@+id/textFirstName"
+        android:layout_width="148dp"
+        android:layout_height="23dp"
+        app:layout_constraintStart_toStartOf="@+id/textFamilyName2"
+        app:layout_constraintTop_toTopOf="@+id/titleFirstName" />
+
+    <TextView
+        android:id="@+id/textFamilyName2"
+        android:layout_width="149dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/titleFamilyName"
+        app:layout_constraintTop_toTopOf="@+id/titleFamilyName" />
+
+    <TextView
+        android:id="@+id/textStudentID2"
+        android:layout_width="147dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textFamilyName2"
+        app:layout_constraintTop_toTopOf="@+id/titleStudentID2" />
+
+    <ImageButton
+        android:id="@+id/buttonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="editStudent"
+        android:tint="@color/btn_text"
+        app:layout_constraintStart_toEndOf="@+id/textFirstName"
+        app:layout_constraintTop_toTopOf="@+id/textFirstName"
+        app:srcCompat="@drawable/iconmonstr_edit_10_48" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/MyStudentRsultList"
+        android:layout_width="371dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAGV" />
+
+    <TextView
+        android:id="@+id/textAGV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avarage  :"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/MyStudentRsultList"
+        app:layout_constraintTop_toBottomOf="@+id/studentResultTitle2" />
+
+    <TextView
+        android:id="@+id/textAVG_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textAGV"
+        app:layout_constraintTop_toTopOf="@+id/textAGV" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="77dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titleFirstName"
+        app:srcCompat="@drawable/iconmonstr_user_19_64"
+        tools:srcCompat="@drawable/iconmonstr_user_19_64" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
